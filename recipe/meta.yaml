@@ -24,6 +24,8 @@ requirements:
     - {{ compiler('cxx') }}            # [not win]
     - {{ compiler('m2w64_cxx') }}      # [win]
     - pkg-config
+    - {{posix}}sed               # [win]
+    - {{posix}}grep              # [win]
     - {{posix}}make
     - {{posix}}zip               # [win]
   host:
