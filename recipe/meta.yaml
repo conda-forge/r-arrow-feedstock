@@ -12,7 +12,7 @@ source:
 
 build:
   merge_build_host: True  # [win]
-  number: 0
+  number: 1
   skip: True  # [win]
   rpaths:
     - lib/R/lib/
@@ -37,7 +37,6 @@ requirements:
     - r-tidyselect
   run:
     - r-base
-    - {{ pin_compatible('arrow-cpp') }}
     - {{native}}gcc-libs         # [win]
     - r-r6
     - r-rcpp >=0.12.18.2
