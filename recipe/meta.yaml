@@ -37,7 +37,6 @@ requirements:
     - r-tidyselect
   run:
     - r-base
-    - {{ pin_compatible('arrow-cpp') }}
     - {{native}}gcc-libs         # [win]
     - r-r6
     - r-rcpp >=0.12.18.2
