@@ -28,10 +28,9 @@ requirements:
     - r-base
     - arrow-cpp {{ version }}
     - r-r6
-    - r-rcpp >=0.12.18.2
+    - r-rcpp >=1.0.1
     - r-assertthat
     - r-bit64
-    - r-fs
     - r-purrr
     - r-rlang
     - r-tidyselect
@@ -39,10 +38,9 @@ requirements:
     - r-base
     - {{native}}gcc-libs         # [win]
     - r-r6
-    - r-rcpp >=0.12.18.2
+    - r-rcpp >=1.0.1
     - r-assertthat
     - r-bit64
-    - r-fs
     - r-purrr
     - r-rlang
     - r-tidyselect
