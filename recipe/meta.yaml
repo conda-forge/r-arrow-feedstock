@@ -23,6 +23,7 @@ requirements:
     - {{ compiler('cxx') }}      # [not win]
     - pkg-config
     - {{posix}}make
+    - {{posix}}sed
   host:
     - r-base
     - arrow-cpp {{ version }}
