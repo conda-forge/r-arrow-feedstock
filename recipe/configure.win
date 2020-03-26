@@ -1,6 +1,8 @@
 #!/bin/bash
 
-echo "PKG_CPPFLAGS=-DNDEBUG -I$LIBRARY_PREFIX/include -DARROW_R_WITH_ARROW" > src/Makevars.win
+set -euxo pipefail
+
+echo "PKG_CPPFLAGS=-DNDEBUG -I\"${LIBRARY_PREFIX}/include\" -I\"${PREFIX}/include\" -DARROW_R_WITH_ARROW" > src/Makevars.win
 echo 'PKG_CXXFLAGS=$(CXX_VISIBILITY)' >> src/Makevars.win
 echo 'CXX_STD=CXX11' >> src/Makevars.win
-echo "PKG_LIBS=-L${LIBRARY_PREFIX}/lib -larrow -lparquet" >> src/Makevars.win
+echo "PKG_LIBS=-L\"${LIBRARY_PREFIX}/lib\" -L\"${LIBRARY_PREFIX}/bin\" -L\"${PREFIX}/lib\" -L\"${PREFIX}/bin\" -larrow -lparquet" >> src/Makevars.win
