@@ -3,7 +3,7 @@
 set -exuo pipefail
 
 export BUILD_PREFIX_SH=${BUILD_PREFIX//\//}
-export BUILD_PREFIX_SH=/c${BUILD_PREFIX_SH:2}
+export BUILD_PREFIX_SH=${BUILD_PREFIX_SH//:}
 
 # Patch Makeconf
 sed -i -e "s;g++;${BUILD_PREFIX_SH}/Library/bin/clang++.exe;g" $BUILD_PREFIX/Lib/R/etc/x64/Makeconf
