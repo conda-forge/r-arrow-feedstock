@@ -32,6 +32,8 @@ requirements:
     - {{posix}}sed               # [win]
     - {{posix}}coreutils         # [win]
     - {{posix}}zip               # [win]
+    - m2w64-tools-git  # [win]
+    - m2w64-binutils   # [win]
   host:
     - r-base
     - arrow-cpp {{ version }}
