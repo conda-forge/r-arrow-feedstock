@@ -57,7 +57,7 @@ requirements:
 test:
   commands:
     - $R -e "library('arrow')"           # [not win]
-    - "\"%R%\" -e \"library('arrow')\""  # [win]
+    - "\"%R%\" -e \"library('arrow'); data(mtcars); write_parquet(mtcars, 'test.parquet')\""  # [win]
 
 about:
   home: https://github.com/apache/arrow
