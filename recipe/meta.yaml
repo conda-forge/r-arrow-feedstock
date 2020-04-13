@@ -22,9 +22,14 @@ requirements:
   build:
     - {{ compiler('c') }}        # [not win]
     - {{ compiler('cxx') }}      # [not win]
+    - clang       # [win]
+    - clangxx     # [win]
+    - llvm-tools  # [win]
+    - lld         # [win]
     - pkg-config
     - {{posix}}make
-    - {{posix}}sed
+    - {{posix}}sed  # [win]
+    - {{posix}}filesystem  # [win]
   host:
     - r-base  # [not win]
     - r-base >=3.6  # [win]
