@@ -1,4 +1,4 @@
-{% set version = "0.16.0" %}
+{% set version = "0.17.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -8,12 +8,12 @@ package:
 
 source:
   url: https://dist.apache.org/repos/dist/release/arrow/arrow-{{ version }}/apache-arrow-{{ version }}.tar.gz
-  sha256: 261992de4029a1593195ff4000501503bd403146471b3168bd2cc414ad0fb7f5
+  sha256: 2c46b4c3e1f88aad510214e633a6f4ce459708f3db78cd0daf549a135cbe8e6d
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
-  skip: True  # [win]
+  skip: true  # [win]
   rpaths:
     - lib/R/lib/
     - lib/
@@ -23,7 +23,7 @@ requirements:
     - {{ compiler('c') }}        # [not win]
     - {{ compiler('cxx') }}      # [not win]
     - pkg-config
-    - {{posix}}make
+    - {{ posix }}make
   host:
     - r-base
     - arrow-cpp {{ version }}
@@ -36,7 +36,7 @@ requirements:
     - r-tidyselect
   run:
     - r-base
-    - {{native}}gcc-libs         # [win]
+    - {{ native }}gcc-libs         # [win]
     - r-r6
     - r-rcpp >=1.0.1
     - r-assertthat
