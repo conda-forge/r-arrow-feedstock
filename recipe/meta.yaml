@@ -28,7 +28,8 @@ requirements:
     - lld         # [win]
     - pkg-config
     - {{ posix }}make
-    - {{ posix }}sed  # [win]
+    - {{ posix }}sed         # [win]
+    - posix                  # [win]
     - {{ posix }}filesystem  # [win]
   host:
     - r-base  # [not win]
