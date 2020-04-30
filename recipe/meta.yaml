@@ -27,9 +27,9 @@ requirements:
     - llvm-tools  # [win]
     - lld         # [win]
     - pkg-config
-    - {{posix}}make
-    - {{posix}}sed  # [win]
-    - {{posix}}filesystem  # [win]
+    - {{ posix }}make
+    - {{ posix }}sed  # [win]
+    - {{ posix }}filesystem  # [win]
   host:
     - r-base  # [not win]
     - r-base >=3.6  # [win]
@@ -44,7 +44,7 @@ requirements:
   run:
     - r-base  # [not win]
     - r-base >=3.6  # [win]
-    - {{native}}gcc-libs         # [win]
+    - {{ native }}gcc-libs         # [win]
     - r-r6
     - r-rcpp >=1.0.1
     - r-assertthat
