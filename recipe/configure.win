@@ -2,7 +2,7 @@
 
 set -euxo pipefail
 
-echo "PKG_CPPFLAGS=-DNDEBUG -I\"${LIBRARY_PREFIX}/include\" -I\"${PREFIX}/include\" -O2 -D_CRT_SECURE_NO_WARNINGS -DARROW_R_WITH_ARROW -fuse-ld=lld" > src/Makevars.win
-echo 'PKG_CXXFLAGS=$(CXX_VISIBILITY)' >> src/Makevars.win
+echo "PKG_CPPFLAGS=-DNDEBUG -I\"${LIBRARY_PREFIX}/include\" -I\"${PREFIX}/include\" -DARROW_R_WITH_ARROW -D_CRT_SECURE_NO_WARNINGS -D_MT -D_DLL -nostdlib -Xclang --dependent-lib=msvcrt -fuse-ld=lld" > src/Makevars.win
+echo "PKG_CXXFLAGS=\$(CXX_VISIBILITY)" >> src/Makevars.win
 echo 'CXX_STD=CXX11' >> src/Makevars.win
-echo "PKG_LIBS=-L\"${LIBRARY_PREFIX}/lib\" -larrow_dataset -lparquet -larrow -fuse-ld=lld" >> src/Makevars.win
+echo "PKG_LIBS=-L\"${LIBRARY_PREFIX}/lib\" -larrow_dataset -lparquet -larrow -nostdlib -Xclang --dependent-lib=msvcrt -fuse-ld=lld" >> src/Makevars.win

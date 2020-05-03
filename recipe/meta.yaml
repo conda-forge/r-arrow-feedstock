@@ -22,7 +22,7 @@ requirements:
   build:
     - {{ compiler('c') }}        # [not win]
     - {{ compiler('cxx') }}      # [not win]
-    - clang       # [win]
+    - clang      # [win]
     - clangxx     # [win]
     - llvm-tools  # [win]
     - lld         # [win]
