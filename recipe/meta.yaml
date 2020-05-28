@@ -12,8 +12,7 @@ source:
 
 build:
   merge_build_host: true  # [win]
-  number: 1
-  skip: true  # [win]
+  number: 2
   rpaths:
     - lib/R/lib/
     - lib/
@@ -22,8 +21,13 @@ requirements:
   build:
     - {{ compiler('c') }}        # [not win]
     - {{ compiler('cxx') }}      # [not win]
+    - {{ compiler('r_clang') }}  # [win]
     - pkg-config
     - {{ posix }}make
+    - {{ posix }}sed         # [win]
+    - {{ posix }}coreutils   # [win]
+    - {{ posix }}filesystem  # [win]
+    - {{ posix }}zip         # [win]
   host:
     - r-base
     - arrow-cpp {{ version }}
@@ -36,7 +40,6 @@ requirements:
     - r-tidyselect
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
     - r-r6
     - r-rcpp >=1.0.1
     - r-assertthat
@@ -48,7 +51,7 @@ requirements:
 test:
   commands:
     - $R -e "library('arrow')"           # [not win]
-    - "\"%R%\" -e \"library('arrow')\""  # [win]
+    - "\"%R%\" -e \"library('arrow'); data(mtcars); write_parquet(mtcars, 'test.parquet')\""  # [win]
 
 about:
   home: https://github.com/apache/arrow
