@@ -9,11 +9,12 @@ package:
 source:
   url: https://dist.apache.org/repos/dist/release/arrow/arrow-{{ version }}/apache-arrow-{{ version }}.tar.gz
   sha256: 86ddb9feb48203a5aaf9cc4f2827525e20a2ca4d7239e492af17e74532ccf243
+  patches:
+    - 0001-ARROW-9589-C-R-Forward-declare-structs-as-structs.patch
 
 build:
   merge_build_host: true  # [win]
-  skip: true  # [win]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
