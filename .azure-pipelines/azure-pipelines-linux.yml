@@ -8,12 +8,12 @@ jobs:
     vmImage: ubuntu-16.04
   strategy:
     matrix:
-      linux_r_base3.6:
-        CONFIG: linux_r_base3.6
+      linux_64_r_base3.6:
+        CONFIG: linux_64_r_base3.6
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_r_base4.0:
-        CONFIG: linux_r_base4.0
+      linux_64_r_base4.0:
+        CONFIG: linux_64_r_base4.0
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
     maxParallel: 8
