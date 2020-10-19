@@ -20,3 +20,6 @@ r_base:
 - '3.6'
 target_platform:
 - linux-64
+zip_keys:
+- - c_compiler_version
+  - cxx_compiler_version
