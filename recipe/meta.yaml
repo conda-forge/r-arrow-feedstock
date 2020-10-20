@@ -32,7 +32,7 @@ requirements:
     - r-base
     - arrow-cpp {{ version }}
     - r-r6
-    - r-rcpp >=1.0.1
+    - r-cpp11
     - r-assertthat
     - r-bit64
     - r-purrr
@@ -41,7 +41,6 @@ requirements:
   run:
     - r-base
     - r-r6
-    - r-rcpp >=1.0.1
     - r-assertthat
     - r-bit64
     - r-purrr
