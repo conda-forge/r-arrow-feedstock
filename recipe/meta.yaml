@@ -1,4 +1,4 @@
-{% set version = "1.0.1" %}
+{% set version = "2.0.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -8,11 +8,11 @@ package:
 
 source:
   url: https://dist.apache.org/repos/dist/release/arrow/arrow-{{ version }}/apache-arrow-{{ version }}.tar.gz
-  sha256: 149ca6aa969ac5742f3b30d1f69a6931a533fd1db8b96712e60bf386a26dc75c
+  sha256: be0342cc847bb340d86aeaef43596a0b6c1dbf1ede9c789a503d939e01c71fbe
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -32,7 +32,7 @@ requirements:
     - r-base
     - arrow-cpp {{ version }}
     - r-r6
-    - r-rcpp >=1.0.1
+    - r-rcpp11
     - r-assertthat
     - r-bit64
     - r-purrr
@@ -41,7 +41,6 @@ requirements:
   run:
     - r-base
     - r-r6
-    - r-rcpp >=1.0.1
     - r-assertthat
     - r-bit64
     - r-purrr
