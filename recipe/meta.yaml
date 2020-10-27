@@ -29,6 +29,8 @@ requirements:
     - {{ posix }}filesystem  # [win]
     - {{ posix }}zip         # [win]
   host:
+    # Needs to be here, otherwise merge_build_host runs into issues
+    - pkg-config  # [win]
     - r-base
     - arrow-cpp {{ version }}
     - r-r6
