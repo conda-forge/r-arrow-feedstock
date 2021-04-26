@@ -1,4 +1,4 @@
-{% set version = "3.0.0" %}
+{% set version = "4.0.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -8,11 +8,11 @@ package:
 
 source:
   url: https://dist.apache.org/repos/dist/release/arrow/arrow-{{ version }}/apache-arrow-{{ version }}.tar.gz
-  sha256: 73c2cc3be537aa1f3fd9490cfec185714168c9bfd599d23e287ab0cc0558e27a
+  sha256: 4a31d0bf702e953bdbcda67af10762a33308281bd247fcbd152ee177419649ae
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
