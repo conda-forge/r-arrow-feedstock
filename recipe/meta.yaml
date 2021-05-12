@@ -13,6 +13,7 @@ source:
 build:
   merge_build_host: true  # [win]
   number: 0
+  skip_compile_pyc: true
   rpaths:
     - lib/R/lib/
     - lib/
