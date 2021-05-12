@@ -13,7 +13,6 @@ source:
 build:
   merge_build_host: true  # [win]
   number: 0
-  skip_compile_pyc: true
   rpaths:
     - lib/R/lib/
     - lib/
@@ -27,6 +26,7 @@ requirements:
     - r-purrr                    # [build_platform != target_platform]
     - r-rlang                    # [build_platform != target_platform]
     - r-tidyselect               # [build_platform != target_platform]
+    - python 3.9                 # [build_platform != target_platform]
     - {{ compiler('c') }}        # [not win]
     - {{ compiler('cxx') }}      # [not win]
     - {{ compiler('r_clang') }}  # [win]
