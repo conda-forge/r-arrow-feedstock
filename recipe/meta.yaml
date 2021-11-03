@@ -26,6 +26,7 @@ requirements:
     - r-purrr                    # [build_platform != target_platform]
     - r-rlang                    # [build_platform != target_platform]
     - r-tidyselect               # [build_platform != target_platform]
+    - r-cpp11                    # [build_platform != target_platform]
     - python 3.9                 # [build_platform != target_platform]
     - {{ compiler('c') }}        # [not win]
     - {{ compiler('cxx') }}      # [not win]
