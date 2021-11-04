@@ -7,7 +7,7 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  url: https://dist.apache.org/repos/dist/release/arrow/arrow-{{ version }}/apache-arrow-{{ version }}.tar.gz
+  url: https://archive.apache.org/dist/arrow/arrow-{{ version }}/apache-arrow-{{ version }}.tar.gz
   sha256: 73c2cc3be537aa1f3fd9490cfec185714168c9bfd599d23e287ab0cc0558e27a
 
 build:
@@ -19,6 +19,15 @@ build:
 
 requirements:
   build:
+    - cross-r-base {{ r_base }}  # [build_platform != target_platform]
+    - r-r6                       # [build_platform != target_platform]
+    - r-assertthat               # [build_platform != target_platform]
+    - r-bit64                    # [build_platform != target_platform]
+    - r-purrr                    # [build_platform != target_platform]
+    - r-rlang                    # [build_platform != target_platform]
+    - r-tidyselect               # [build_platform != target_platform]
+    - r-cpp11                    # [build_platform != target_platform]
+    - python 3.9                 # [build_platform != target_platform]
     - {{ compiler('c') }}        # [not win]
     - {{ compiler('cxx') }}      # [not win]
     - {{ compiler('r_clang') }}  # [win]
