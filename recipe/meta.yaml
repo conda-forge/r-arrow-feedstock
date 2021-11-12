@@ -83,9 +83,9 @@ extra:
 # License: Apache License (>= 2.0)
 # Encoding: UTF-8
 # LazyData: true
-# SystemRequirements: C++11
+# SystemRequirements: C++11; for AWS S3 support on Linux, libcurl and openssl (optional)
 # LinkingTo: Rcpp (>= 0.12.18.2)
-# Imports: Rcpp (>= 0.12.18.2), rlang, purrr, assertthat, glue, R6, vctrs (>= 0.0.0.9000), fs, tibble, crayon, withr, bit64
+# Imports: Rcpp (>= 0.12.18.2), rlang, purrr, assertthat, glue, R6, vctrs (>= 0.0.0.9000), fs, tibble, crayon, withr, bit64 
 # Remotes: romainfrancois/vctrs@bit64, RcppCore/Rcpp, r-lib/withr
 # Roxygen: list(markdown = TRUE)
 # RoxygenNote: 6.1.1
