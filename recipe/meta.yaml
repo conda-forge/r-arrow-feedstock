@@ -1,4 +1,4 @@
-{% set version = "5.0.0" %}
+{% set version = "6.0.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -8,11 +8,11 @@ package:
 
 source:
   url: https://dist.apache.org/repos/dist/release/arrow/arrow-{{ version }}/apache-arrow-{{ version }}.tar.gz
-  sha256: c3b4313eca594c20f761a836719721aaf0760001af896baec3ab64420ff9910a
+  sha256: 69d268f9e82d3ebef595ad1bdc83d4cb02b20c181946a68631f6645d7c1f7a90
 
 build:
   merge_build_host: true  # [win]
-  number: 2
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -76,16 +76,16 @@ extra:
 
 # Package: arrow
 # Title: R Integration to 'Apache' 'Arrow'
-# Version: 0.12.1
+# Version: 6.0.0.2
 # Authors@R: c( person("Romain", "Francois", email = "romain@rstudio.com", role = c("aut", "cre")), person("Javier", "Luraschi", email = "javier@rstudio.com", role = c("ctb")), person("Jeffrey", "Wong", email = "jeffreyw@netflix.com", role = c("ctb")), person("Apache Arrow", email = "dev@arrow.apache.org", role = c("aut", "cph")) )
 # Description: R Integration to 'Apache' 'Arrow'.
 # Depends: R (>= 3.5)
 # License: Apache License (>= 2.0)
 # Encoding: UTF-8
 # LazyData: true
-# SystemRequirements: C++11
+# SystemRequirements: C++11; for AWS S3 support on Linux, libcurl and openssl (optional)
 # LinkingTo: Rcpp (>= 0.12.18.2)
-# Imports: Rcpp (>= 0.12.18.2), rlang, purrr, assertthat, glue, R6, vctrs (>= 0.0.0.9000), fs, tibble, crayon, withr, bit64
+# Imports: Rcpp (>= 0.12.18.2), rlang, purrr, assertthat, glue, R6, vctrs (>= 0.0.0.9000), fs, tibble, crayon, withr, bit64 
 # Remotes: romainfrancois/vctrs@bit64, RcppCore/Rcpp, r-lib/withr
 # Roxygen: list(markdown = TRUE)
 # RoxygenNote: 6.1.1
