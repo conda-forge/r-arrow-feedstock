@@ -11,6 +11,8 @@ source:
   sha256: 2dd8f0ea0848a58785628ee3a57675548d509e17213a2f5d72b0d900b43f5430
 
 build:
+  # 4.1 not usable anymore unless https://github.com/conda-forge/r-base-feedstock/pull/236 gets merged
+  skip: true  # [unix and (r_base == "4.1")]
   merge_build_host: true  # [win]
   number: 0
   rpaths:
