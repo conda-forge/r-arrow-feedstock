@@ -60,7 +60,7 @@ requirements:
 
 test:
   commands:
-    - $R -e "library('arrow')"           # [not win]
+    - $R -e "library('arrow'); stopifnot(arrow_with_dataset(), arrow_with_parquet(), arrow_with_s3())"           # [not win]
     - "\"%R%\" -e \"library('arrow'); data(mtcars); write_parquet(mtcars, 'test.parquet')\""  # [win]
 
 about:
