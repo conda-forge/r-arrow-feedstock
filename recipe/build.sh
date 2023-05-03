@@ -1,7 +1,6 @@
 #!/bin/bash
 set -ex
 
-export LIB_DIR=$PREFIX/lib
 export DISABLE_AUTOBREW=1
 
 # arrow uses C++17
