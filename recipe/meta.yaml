@@ -38,7 +38,7 @@ requirements:
   host:
     # Needs to be here, otherwise merge_build_host runs into issues
     - pkg-config  # [win]
-    - libarrow {{ version }}
+    - libarrow-all {{ version }}
     - r-base
     - r-r6
     - r-cpp11
