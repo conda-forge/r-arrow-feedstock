@@ -45,7 +45,7 @@ requirements:
     - libparquet {{ version }}
     - r-base
     - r-r6
-    - r-cpp11
+    - r-cpp17
     - r-assertthat
     - r-bit64
     - r-purrr
