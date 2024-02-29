@@ -3,7 +3,7 @@
 bash %RECIPE_DIR%/build_win.sh
 IF %ERRORLEVEL% NEQ 0 exit 1
 
-copy %RECIPE_DIR%/configure.win r
+copy %RECIPE_DIR%\configure.win r
 IF %ERRORLEVEL% NEQ 0 exit 1
 
 copy %RECIPE_DIR%/install.libs.R r/src
