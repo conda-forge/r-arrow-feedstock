@@ -31,10 +31,10 @@ requirements:
     - {{ compiler('r_clang') }}  # [win]
     - pkg-config
     - {{ posix }}make
-    - {{ posix }}sed         # [win]
-    - {{ posix }}coreutils   # [win]
-    - {{ posix }}filesystem  # [win]
-    - {{ posix }}zip         # [win]
+    #- {{ posix }}sed         # [win]
+    #- {{ posix }}coreutils   # [win]
+    #- {{ posix }}filesystem  # [win]
+    #- {{ posix }}zip         # [win]
   host:
     # Needs to be here, otherwise merge_build_host runs into issues
     - pkg-config  # [win]
