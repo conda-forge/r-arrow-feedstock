@@ -14,5 +14,5 @@ echo CXX17STD = -std=c++17 >>%R_MAKEVARS_SITE%
 type %R_MAKEVARS_SITE%
 
 set "MAKEFLAGS=-j%CPU_COUNT%"
-"%R%" CMD INSTALL --build r
+"%R%" CMD INSTALL --debug --build r
 IF %ERRORLEVEL% NEQ 0 exit 1
