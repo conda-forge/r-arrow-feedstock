@@ -9,7 +9,7 @@ IF %ERRORLEVEL% NEQ 0 exit 1
 copy %RECIPE_DIR%\install.libs.R r\src
 IF %ERRORLEVEL% NEQ 0 exit 1
 
-echo CXX17STD=-std=c++17 >>%R_MAKEVARS_SITE%
+echo CXX17STD = -std=c++17 >>%R_MAKEVARS_SITE%
 
 type %R_MAKEVARS_SITE%
 
