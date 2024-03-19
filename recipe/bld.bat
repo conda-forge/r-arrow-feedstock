@@ -9,6 +9,10 @@ IF %ERRORLEVEL% NEQ 0 exit 1
 copy %RECIPE_DIR%\install.libs.R r\src
 IF %ERRORLEVEL% NEQ 0 exit 1
 
+
+"%R%" CMD config --all
+IF %ERRORLEVEL% NEQ 0 exit 1
+
 set "MAKEFLAGS=-j%CPU_COUNT%"
 "%R%" CMD INSTALL --build r
 IF %ERRORLEVEL% NEQ 0 exit 1
