@@ -32,7 +32,7 @@ requirements:
     - {{ compiler('r_clang') }}  # [win]
     - pkg-config
     - {{ posix }}make
-    #- {{ posix }}sed         # [win]
+    - m2-sed         # [win]
     #- {{ posix }}coreutils   # [win]
     #- {{ posix }}filesystem  # [win]
     #- {{ posix }}zip         # [win]

@@ -14,5 +14,5 @@ IF %ERRORLEVEL% NEQ 0 exit 1
 IF %ERRORLEVEL% NEQ 0 exit 1
 
 set "MAKEFLAGS=-j%CPU_COUNT%"
-"%R%" CMD INSTALL --build r
+"%R%" CMD INSTALL --build --debug r
 IF %ERRORLEVEL% NEQ 0 exit 1
