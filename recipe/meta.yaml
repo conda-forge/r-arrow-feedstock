@@ -1,4 +1,4 @@
-{% set version = "15.0.1" %}
+{% set version = "16.0.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://dist.apache.org/repos/dist/release/arrow/arrow-{{ version }}/apache-arrow-{{ version }}.tar.gz
-  sha256: 55db63ed9fd6917b7abfe5d4186c9f532cbe48aa53f4040d57e7c29ad70bcefa
+  sha256: 9f4051ae9473c97991d9af801e2f94ae3455067719ca7f90b8137f9e9a700b8d
 
 build:
   # Skip on Windows until build problems are fixed
