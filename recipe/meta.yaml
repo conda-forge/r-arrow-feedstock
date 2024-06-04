@@ -31,6 +31,7 @@ requirements:
     - {{ compiler('c') }}        # [not win]
     - {{ compiler('cxx') }}      # [not win]
     - {{ compiler('r_clang') }}  # [win]
+    - {{ stdlib("c") }}
     - pkg-config
     - {{ posix }}make
     - {{ posix }}sed         # [win]
