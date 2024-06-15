@@ -11,10 +11,8 @@ source:
   sha256: c9e60c7e87e59383d21b20dc874b17153729ee153264af6d21654b7dff2c60d7
 
 build:
-  # Skip on Windows until build problems are fixed
-  skip: True  # [win]
   merge_build_host: true  # [win]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
