@@ -37,6 +37,7 @@ requirements:
     - {{ posix }}coreutils   # [win]
     - {{ posix }}filesystem  # [win]
     - {{ posix }}zip         # [win]
+    - msys2-conda-epoch ==20160418  # [win]
   host:
     # Needs to be here, otherwise merge_build_host runs into issues
     - pkg-config  # [win]
