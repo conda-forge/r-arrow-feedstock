@@ -1,6 +1,5 @@
 {% set version = "17.0.0" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-arrow
@@ -11,10 +10,8 @@ source:
   sha256: 9d280d8042e7cf526f8c28d170d93bfab65e50f94569f6a790982a878d8d898d
 
 build:
-  # Skip on Windows until build problems are fixed
   skip: true  # [win]
-  merge_build_host: true  # [win]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
