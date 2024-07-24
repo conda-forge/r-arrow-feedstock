@@ -19,6 +19,14 @@ build:
 requirements:
   build:
     - cross-r-base {{ r_base }}  # [build_platform != target_platform]
+    - r-rlang                    # [build_platform != target_platform]
+    - r-bit64                    # [build_platform != target_platform]
+    - r-r6                       # [build_platform != target_platform]
+    - r-assertthat               # [build_platform != target_platform]
+    - r-purrr                    # [build_platform != target_platform]
+    - r-cpp11                    # [build_platform != target_platform]
+    - r-tidyselect               # [build_platform != target_platform]
+    - cross-r-base {{ r_base }}  # [build_platform != target_platform]
     - r-r6                       # [build_platform != target_platform]
     - r-assertthat               # [build_platform != target_platform]
     - r-bit64                    # [build_platform != target_platform]
