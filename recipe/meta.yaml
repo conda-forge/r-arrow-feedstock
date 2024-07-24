@@ -1,20 +1,17 @@
 {% set version = "16.1.0" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-arrow
   version: {{ version|replace("-", "_") }}
 
 source:
-  url: https://dist.apache.org/repos/dist/release/arrow/arrow-{{ version }}/apache-arrow-{{ version }}.tar.gz
+  url: https://www.apache.org/dyn/closer.lua/arrow/arrow-{{ version }}/apache-arrow-{{ version }}.tar.gz?action=download
+  fn: apache-arrow-{{ version }}.tar.gz
   sha256: c9e60c7e87e59383d21b20dc874b17153729ee153264af6d21654b7dff2c60d7
 
 build:
-  # Skip on Windows until build problems are fixed
-  skip: True  # [win]
-  merge_build_host: true  # [win]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -49,6 +46,8 @@ requirements:
     - r-base
     - r-r6
     - r-cpp11
+    # https://github.com/r-lib/cpp11/issues/360
+    - r-cpp11 <0.4.4    # [win]
     - r-assertthat
     - r-bit64
     - r-purrr
@@ -62,6 +61,7 @@ requirements:
     - r-purrr
     - r-rlang
     - r-tidyselect
+    - r-tzdb            # [win]
 
 test:
   commands:
