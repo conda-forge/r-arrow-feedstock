@@ -60,6 +60,7 @@ requirements:
     - r-purrr
     - r-rlang
     - r-tidyselect
+    - r-tzdb            # [win]
 
 test:
   commands:
