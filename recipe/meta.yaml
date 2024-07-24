@@ -6,7 +6,8 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  url: https://dist.apache.org/repos/dist/release/arrow/arrow-{{ version }}/apache-arrow-{{ version }}.tar.gz
+  url: https://www.apache.org/dyn/closer.lua/arrow/arrow-{{ version }}/apache-arrow-{{ version }}.tar.gz?action=download
+  fn: apache-arrow-{{ version }}.tar.gz
   sha256: 5c70eafb1011f9d124bafb328afe54f62cc5b9280b7080e1e3d668f78c0e407e
 
 build:
