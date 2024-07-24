@@ -1,17 +1,16 @@
-{% set version = "14.0.1" %}
+{% set version = "14.0.2" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-arrow
   version: {{ version|replace("-", "_") }}
 
 source:
-  url: https://dist.apache.org/repos/dist/release/arrow/arrow-{{ version }}/apache-arrow-{{ version }}.tar.gz
-  sha256: 5c70eafb1011f9d124bafb328afe54f62cc5b9280b7080e1e3d668f78c0e407e
+  url: https://www.apache.org/dyn/closer.lua/arrow/arrow-{{ version }}/apache-arrow-{{ version }}.tar.gz?action=download
+  fn: apache-arrow-{{ version }}.tar.gz
+  sha256: 1304dedb41896008b89fe0738c71a95d9b81752efc77fa70f264cb1da15d9bc2
 
 build:
-  merge_build_host: true  # [win]
   number: 0
   rpaths:
     - lib/R/lib/
@@ -29,6 +28,7 @@ requirements:
     - {{ compiler('c') }}        # [not win]
     - {{ compiler('cxx') }}      # [not win]
     - {{ compiler('r_clang') }}  # [win]
+    - {{ stdlib("c") }}
     - pkg-config
     - {{ posix }}make
     - {{ posix }}sed         # [win]
@@ -46,6 +46,8 @@ requirements:
     - r-base
     - r-r6
     - r-cpp11
+    # https://github.com/r-lib/cpp11/issues/360
+    - r-cpp11 <0.4.4    # [win]
     - r-assertthat
     - r-bit64
     - r-purrr
@@ -59,6 +61,7 @@ requirements:
     - r-purrr
     - r-rlang
     - r-tidyselect
+    - r-tzdb            # [win]
 
 test:
   commands:
