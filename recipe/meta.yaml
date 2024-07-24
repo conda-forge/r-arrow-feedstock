@@ -6,11 +6,11 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  url: https://dist.apache.org/repos/dist/release/arrow/arrow-{{ version }}/apache-arrow-{{ version }}.tar.gz
+  url: https://www.apache.org/dyn/closer.lua/arrow/arrow-{{ version }}/apache-arrow-{{ version }}.tar.gz?action=download
+  fn: apache-arrow-{{ version }}.tar.gz
   sha256: 9d280d8042e7cf526f8c28d170d93bfab65e50f94569f6a790982a878d8d898d
 
 build:
-  skip: true  # [win]
   number: 1
   rpaths:
     - lib/R/lib/
@@ -46,6 +46,8 @@ requirements:
     - r-base
     - r-r6
     - r-cpp11
+    # https://github.com/r-lib/cpp11/issues/360
+    - r-cpp11 <0.4.4    # [win]
     - r-assertthat
     - r-bit64
     - r-purrr
@@ -59,6 +61,7 @@ requirements:
     - r-purrr
     - r-rlang
     - r-tidyselect
+    - r-tzdb            # [win]
 
 test:
   commands:
