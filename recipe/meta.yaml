@@ -1,4 +1,4 @@
-{% set version = "14.0.2" %}
+{% set version = "15.0.2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -8,7 +8,7 @@ package:
 source:
   url: https://www.apache.org/dyn/closer.lua/arrow/arrow-{{ version }}/apache-arrow-{{ version }}.tar.gz?action=download
   fn: apache-arrow-{{ version }}.tar.gz
-  sha256: 1304dedb41896008b89fe0738c71a95d9b81752efc77fa70f264cb1da15d9bc2
+  sha256: abbf97176db6a9e8186fe005e93320dac27c64562755c77de50a882eb6179ac6
 
 build:
   number: 0
