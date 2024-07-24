@@ -11,7 +11,7 @@ source:
   sha256: 9d280d8042e7cf526f8c28d170d93bfab65e50f94569f6a790982a878d8d898d
 
 build:
-  number: 1
+  number: 2
   rpaths:
     - lib/R/lib/
     - lib/
@@ -45,9 +45,7 @@ requirements:
     - libparquet {{ version }}
     - r-base
     - r-r6
-    - r-cpp11
-    # https://github.com/r-lib/cpp11/issues/360
-    - r-cpp11 <0.4.4    # [win]
+    - r-cpp17
     - r-assertthat
     - r-bit64
     - r-purrr
