@@ -1,0 +1,2 @@
+channel_sources:
+  - conda-forge/label/rcpp11_dev,conda-forge
