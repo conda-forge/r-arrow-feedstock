@@ -225,6 +225,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@conda-forge/arrow-cpp](https://github.com/conda-forge/arrow-cpp/)
-* [@conda-forge/r](https://github.com/conda-forge/r/)
+* [@conda-forge/arrow-cpp](https://github.com/orgs/conda-forge/teams/arrow-cpp/)
+* [@conda-forge/r](https://github.com/orgs/conda-forge/teams/r/)
 
