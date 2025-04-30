@@ -1,0 +1,8 @@
+c_compiler:             # [win]
+  - r_clang             # [win]
+c_compiler_version:     # [win]
+  - 19                  # [win]
+cxx_compiler:           # [win]
+  - r_clang             # [win]
+cxx_compiler_version:   # [win]
+  - 19                  # [win]
