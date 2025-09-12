@@ -24,6 +24,14 @@ jobs:
         CONFIG: linux_aarch64_r_base4.5
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_ppc64le_r_base4.4:
+        CONFIG: linux_ppc64le_r_base4.4
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-ppc64le:alma9
+      linux_ppc64le_r_base4.5:
+        CONFIG: linux_ppc64le_r_base4.5
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-ppc64le:alma9
   timeoutInMinutes: 360
   variables: {}
 
