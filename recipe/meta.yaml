@@ -12,8 +12,6 @@ source:
 
 build:
   number: 0
-  # TODO: debug failures on windows
-  skip: true  # [win]
   rpaths:
     - lib/R/lib/
     - lib/
