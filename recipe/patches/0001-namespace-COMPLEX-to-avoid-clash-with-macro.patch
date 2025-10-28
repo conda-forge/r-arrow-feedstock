@@ -1,0 +1,22 @@
+From 2785975242f71e65d16245fc92ee67f288ffb4f4 Mon Sep 17 00:00:00 2001
+From: "H. Vetinari" <h.vetinari@gmx.com>
+Date: Mon, 27 Oct 2025 19:09:31 +0100
+Subject: [PATCH] namespace `COMPLEX` to avoid clash with macro
+
+---
+ r/src/arrow_types.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/r/src/arrow_types.h b/r/src/arrow_types.h
+index d1882e56da..dbe451e5dc 100644
+--- a/r/src/arrow_types.h
++++ b/r/src/arrow_types.h
+@@ -190,7 +190,7 @@ class RBuffer : public MutableBuffer {
+     } else if (TYPEOF(vec) == REALSXP) {
+       return REAL(vec);
+     } else if (TYPEOF(vec) == CPLXSXP) {
+-      return COMPLEX(vec);
++      return ::COMPLEX(vec);
+     } else if (TYPEOF(vec) == STRSXP) {
+       // We don't want to expose the string data here, so we error
+       cpp11::stop("Operation not supported for string vectors.");
