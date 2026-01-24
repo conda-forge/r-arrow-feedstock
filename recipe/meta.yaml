@@ -41,6 +41,7 @@ requirements:
     - pkg-config  # [win]
     - libarrow {{ version }}
     - libarrow-acero {{ version }}
+    - libarrow-compute {{ version }}
     - libarrow-dataset {{ version }}
     - libarrow-substrait {{ version }}
     - libparquet {{ version }}
