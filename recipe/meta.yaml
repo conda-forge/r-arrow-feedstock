@@ -1,4 +1,4 @@
-{% set version = "22.0.0" %}
+{% set version = "23.0.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -8,7 +8,7 @@ package:
 source:
   url: https://www.apache.org/dyn/closer.lua/arrow/arrow-{{ version }}/apache-arrow-{{ version }}.tar.gz?action=download
   fn: apache-arrow-{{ version }}.tar.gz
-  sha256: 131250cd24dec0cddde04e2ad8c9e2bc43edc5e84203a81cf71cf1a33a6e7e0f
+  sha256: 12f6844a0ba3b99645cd2bc6cc4f44f6a174ab90da37e474f08b7d073433cb60
   patches:
     - patches/0001-namespace-COMPLEX-to-avoid-clash-with-macro.patch
 
