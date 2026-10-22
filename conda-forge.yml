@@ -1,8 +1,8 @@
 bot:
   abi_migration_branches:
-  - 20.x
-  - 19.x
-  - 18.x
+    - 20.x
+    - 19.x
+    - 18.x
   check_solvable: true
 conda_build:
   pkg_format: '2'
