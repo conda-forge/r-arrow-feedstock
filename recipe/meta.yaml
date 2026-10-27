@@ -39,6 +39,7 @@ requirements:
   host:
     # Needs to be here, otherwise merge_build_host runs into issues
     - pkg-config  # [win]
+    - libxml2-devel
     - libarrow {{ version }}
     - libarrow-acero {{ version }}
     - libarrow-compute {{ version }}
